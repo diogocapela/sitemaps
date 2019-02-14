@@ -1,0 +1,27 @@
+{
+  "name": "sitemaps",
+  "version": "0.0.1",
+  "description": "A simple sitemap.xml generator.",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf node_modules && rm package-lock.json",
+    "test": "mocha \"**/*.test.js\" --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diogocapela/sitemaps.git"
+  },
+  "author": "Diogo Capela",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diogocapela/sitemaps/issues"
+  },
+  "homepage": "https://github.com/diogocapela/sitemaps#readme",
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "lodash": "^4.17.11",
+    "mocha": "^5.2.0"
+  }
+}
