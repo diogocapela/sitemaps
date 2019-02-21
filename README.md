@@ -1,6 +1,7 @@
 # sitemaps
 
-[![](https://img.shields.io/npm/v/sitemaps.svg)](https://www.npmjs.com/package/sitemaps)
+[![NPM](https://img.shields.io/npm/v/sitemaps.svg)](https://www.npmjs.com/package/sitemaps)
+[![Build Status](https://travis-ci.org/diogocapela/sitemaps.svg?branch=master)](https://travis-ci.org/diogocapela/sitemaps)
 
 A simple sitemap.xml generator.
 
@@ -15,7 +16,9 @@ $ npm i sitemaps --save
 ```javascript
 const sitemaps = require('sitemaps');
 
-const highPriority = ['https://example.com'];
+const highPriority = [
+    'https://example.com',
+];
 const lowPriority = [
     'https://example.com/about',
     'https://example.com/services',
@@ -30,19 +33,6 @@ sitemaps(highPriority, lowPriority, filePath, (xml, error) => {
     }
     console.log(`Sitemap.xml generated at: ${filePath}`);
 });
-```
-
-## Scripts
-
-```bash
-# Install all the dependencies
-$ npm i
-
-# Run the tests
-$ npm run test
-
-# Delete node_modules and package-lock.json
-$ npm run clean
 ```
 
 ## License
