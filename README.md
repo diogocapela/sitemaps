@@ -16,23 +16,34 @@ $ npm i sitemaps --save
 ```javascript
 const sitemaps = require('sitemaps');
 
-const highPriority = [
-    'https://example.com',
-];
-const lowPriority = [
-    'https://example.com/about',
-    'https://example.com/services',
-    'https://example.com/contact',
-];
 const filePath = `${__dirname}/sitemap.xml`;
 
-sitemaps(highPriority, lowPriority, filePath, (xml, error) => {
-    if (error) {
-        console.log(error);
-        return;
-    }
-    console.log(`Sitemap.xml generated at: ${filePath}`);
-});
+const links = [
+    {
+        loc: 'https://example.com',
+        priority: '1.00',
+        changefreq: 'weekly',
+    },
+    {
+        loc: 'https://example.com/about',
+        priority: '0.80',
+        changefreq: 'monthly',
+    },
+    {
+        loc: 'https://example.com/services',
+        priority: '0.80',
+        changefreq: 'monthly',
+    },
+    {
+        loc: 'https://example.com/contact',
+        priority: '0.60',
+        changefreq: 'monthly',
+    },
+];
+
+sitemaps(filePath, links);
+
+console.log(`Sitemap.xml generated at: ${filePath}`);
 ```
 
 ## License
