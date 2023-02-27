@@ -1,16 +1,15 @@
-import assert from 'assert';
-import merge from 'lodash/merge';
-import { createSitemap, UrlItem } from '..';
+import { createSitemap, type UrlItem } from '..';
 
 const urls: UrlItem[] = [
   {
     loc: 'https://example.com',
+    changefreq: 'monthly',
+    priority: 1,
   },
   {
     loc: 'https://example.com/about',
-  },
-  {
-    loc: 'https://example.com/contact',
+    changefreq: 'weekly',
+    priority: 0.5,
   },
 ];
 
@@ -25,16 +24,9 @@ const xmlTags = [
   '</urlset>',
 ];
 
-const expected = merge(
-  urls.map((url) => `<loc>${url.loc}</loc>`),
-  xmlTags
-);
+const expected = [...urls.map((url) => `<loc>${url.loc}</loc>`), ...xmlTags];
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-describe('sitemaps', () => {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
+describe('createSitemap', () => {
   it('should work', () => {
     const xml = createSitemap({
       filePath: undefined,
@@ -42,7 +34,7 @@ describe('sitemaps', () => {
     });
 
     expected.forEach((tag) => {
-      assert.equal(true, xml.includes(tag));
+      expect(xml.includes(tag)).toBe(true);
     });
   });
 });

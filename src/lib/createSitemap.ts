@@ -1,9 +1,11 @@
 import fs from 'fs';
 
+type ChangeFreq = 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+
 export interface UrlItem {
   loc: string;
   lastmod?: string;
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  changefreq?: ChangeFreq | string;
   priority?: number;
 }
 
