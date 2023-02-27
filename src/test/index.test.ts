@@ -1,12 +1,8 @@
-/* eslint-disable no-undef */
+import assert from 'assert';
+import merge from 'lodash/merge';
+import { createSitemap, UrlItem } from '..';
 
-const assert = require('assert');
-const merge = require('lodash/merge');
-const sitemaps = require('../src');
-
-const filePath = `${__dirname}/sitemap.xml.log`;
-
-const links = [
+const urls: UrlItem[] = [
   {
     loc: 'https://example.com',
   },
@@ -30,13 +26,20 @@ const xmlTags = [
 ];
 
 const expected = merge(
-  links.map((l) => `<loc>${l}</loc>`),
+  urls.map((url) => `<loc>${url.loc}</loc>`),
   xmlTags
 );
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 describe('sitemaps', () => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   it('should work', () => {
-    const xml = sitemaps(filePath, links);
+    const xml = createSitemap({
+      filePath: undefined,
+      urls,
+    });
 
     expected.forEach((tag) => {
       assert.equal(true, xml.includes(tag));

@@ -1,29 +1,47 @@
 {
-    "name": "sitemaps",
-    "version": "1.0.0",
-    "description": "A simple sitemap.xml generator.",
-    "main": "index.js",
-    "scripts": {
-        "test": "mocha \"**/*.test.js\" --exit"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/diogocapela/sitemaps.git"
-    },
-    "author": "Diogo Capela",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/diogocapela/sitemaps/issues"
-    },
-    "homepage": "https://github.com/diogocapela/sitemaps#readme",
-    "devDependencies": {
-        "eslint": "7.7.0",
-        "eslint-config-airbnb-base": "14.2.0",
-        "eslint-config-prettier": "6.11.0",
-        "eslint-plugin-import": "2.22.0",
-        "eslint-plugin-prettier": "3.1.4",
-        "lodash": "4.17.20",
-        "mocha": "8.1.1",
-        "prettier": "2.0.5"
-    }
+  "name": "sitemaps",
+  "version": "2.0.0",
+  "description": "A simple sitemap.xml generator.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha \"**/*.test.js\" --exit",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diogocapela/sitemaps.git"
+  },
+  "keywords": [
+    "sitemap",
+    "generator",
+    "xml",
+    "typescript"
+  ],
+  "author": "Diogo Capela",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diogocapela/sitemaps/issues"
+  },
+  "homepage": "https://github.com/diogocapela/sitemaps#readme",
+  "files": [
+    "dist/**/*"
+  ],
+  "devDependencies": {
+    "@types/lodash": "4.14.191",
+    "@types/node": "18.14.2",
+    "@typescript-eslint/eslint-plugin": "5.53.0",
+    "@typescript-eslint/parser": "5.53.0",
+    "eslint": "8.35.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-prettier": "4.2.1",
+    "lodash": "4.17.2",
+    "mocha": "8.1.1",
+    "prettier": "2.8.4",
+    "typescript": "4.9.5"
+  }
 }
