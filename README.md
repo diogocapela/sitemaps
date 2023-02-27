@@ -84,7 +84,6 @@ createSitemapIndex({
 | --------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `loc`     | string (required) | Identifies the location of the Sitemap.                                                                                                                  |
 | `lastmod` | string (optional) | Identifies the time that the corresponding Sitemap file was modified. The value should be in [W3C Datetime](https://www.w3.org/TR/NOTE-datetime) format. |
-|           |
 
 ## License
 
