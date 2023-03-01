@@ -88,3 +88,5 @@ createSitemapIndex({
 ## License
 
 Open source under the terms of the [MIT License](/LICENSE).
+
+Maintained by [Diogo Capela](https://diogocapela.com).
