@@ -1,10 +1,11 @@
 language: node_js
 
 node_js:
-  - "node"
+  - 'node'
 
 before_script:
   - npm i
 
 script:
+  - npm run build
   - npm run test
