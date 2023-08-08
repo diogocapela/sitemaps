@@ -77,7 +77,7 @@ createSitemapIndex({
   ],
 });
 
-// The sitemapIndex.xml file will be created in the specified path.
+// The sitemap-index.xml file will be created in the specified path.
 ```
 
 | Attribute | Type              | Description                                                                                                                                              |
