@@ -1,9 +1,7 @@
+dist/
+
 # macOS
 *.DS_Store
-
-# Visual Studio
-.vs/
-.vscode/
 
 # JetBrains
 .idea/
